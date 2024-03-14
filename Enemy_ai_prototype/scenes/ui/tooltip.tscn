@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://b07xfodd1t28i"]
+
+[ext_resource type="Theme" uid="uid://ckq3dav128amj" path="res://main_theme.tres" id="1_258dd"]
+[ext_resource type="Script" path="res://scenes/ui/tooltip.gd" id="2_7tupu"]
+[ext_resource type="Texture2D" uid="uid://o3u8yw5iyi22" path="res://Godot_Images/dcvyavy-eb42e81d-f272-4206-a80d-67b21919fa17.png" id="2_raqan"]
+
+[node name="Tooltip" type="PanelContainer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_right = 250.0
+offset_bottom = 150.0
+grow_horizontal = 2
+theme = ExtResource("1_258dd")
+script = ExtResource("2_7tupu")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TooltipIcon" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+texture = ExtResource("2_raqan")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TooltipText" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/line_separation = 7
+bbcode_enabled = true
+text = "tooltip description
+tooltip description"

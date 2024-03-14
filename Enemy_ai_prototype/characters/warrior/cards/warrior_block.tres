@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b851kgpw7lkqb"]
+
+[ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://global/art/tile_0102.png" id="1_2v0p5"]
+[ext_resource type="Script" path="res://characters/warrior/cards/dark_block.gd" id="2_38gtg"]
+
+[resource]
+script = ExtResource("2_38gtg")
+id = "warrior_block"
+type = 1
+target = 0
+cost = 1
+icon = ExtResource("1_2v0p5")
+tooltip_text = "[center]Gain [color=\"0044ff\"]5[/color] shield.[/center]"
